@@ -51,7 +51,7 @@ const Index = ({ data, code }) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/books");
+  const res = await fetch("https://apirest-plum.vercel.app/api/books");
   let data = null;
   let code = await res.status;
   res.status == 200 ? data = await res.json() : (data = "Error");
